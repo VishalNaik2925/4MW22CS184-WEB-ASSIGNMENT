@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9; /* Light grey background */
+  color: #333; /* Neutral text color */
+  line-height: 1.6;
+}
+
+/* Centered Container for the Form */
+.container {
+  max-width: 600px;
+  margin: 50px auto; /* Centers the form vertically and horizontally */
+  background: #ffffff; /* White background */
+  padding: 20px 30px; /* Inner padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Form Header Styles */
+h1 {
+  text-align: center;
+  color: #4a90e2; /* Bright blue for header */
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* Label Styles */
+label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px; /* Space between label and input field */
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Input, Select, and Textarea Styles */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 6px; /* Smooth rounded corners */
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding doesn’t affect the size */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* On Focus (when clicked or tabbed) */
+input:focus, select:focus, textarea:focus {
+  border-color: #4a90e2; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Light blue shadow */
+  outline: none;
+}
+
+/* Textarea Specific Styles */
+textarea {
+  resize: none; /* Prevent resizing for consistent layout */
+  height: 100px; /* Fixed height */
+}
+
+/* Submit Button Styles */
+button {
+  width: 100%; /* Full width for mobile-friendly design */
+  padding: 12px;
+  background-color: #007BFF; /* Bright blue background */
+  color: white; /* White text */
+  font-weight: bold;
+  font-size: 1rem;
+  border: none; /* No border */
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+/* Button Active Effect (Click Animation) */
+button:active {
+  transform: scale(0.98); /* Shrinks slightly when clicked */
+}
+
+/* Success Message Styles */
+#successMessage {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px; /* Slightly smaller padding for mobile */
+  }
+
+  h1 {
+    font-size: 1.6rem; /* Slightly smaller header font size */
+  }
+
+  button {
+    font-size: 0.9rem; /* Slightly smaller button font size */
+  }
+}
+
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Online Registration Form</h1>
+    <form id="registrationForm" method="POST" action="process.php">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div id="successMessage"></div>
+  </div>
+</body>
+</html>
