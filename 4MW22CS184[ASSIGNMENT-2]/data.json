@@ -1,26 +1,3 @@
 [
-    {
-        "name": "vishal",
-        "email": "v@gmail.com",
-        "phone": "123456788",
-        "dob": "2004-10-20",
-        "gender": "Male",
-        "message": "dddd"
-    },
-    {
-        "name": "aaa",
-        "email": "abc@gmail.com",
-        "phone": "09111111111",
-        "dob": "2011-11-11",
-        "gender": "Male",
-        "message": "1111"
-    },
-    {
-        "name": "web",
-        "email": "web@gamail.com",
-        "phone": "09111111111",
-        "dob": "1111-11-11",
-        "gender": "Male",
-        "message": "dkslkdlsds"
-    }
+    
 ]
